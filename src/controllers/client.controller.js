@@ -23,9 +23,6 @@ export const createClient = async (req, res) => {
       nombre,
       descripcion,
       direccion,
-      web,
-      industria,
-      estado,
       telefono,
       user: req.user.id,
     });

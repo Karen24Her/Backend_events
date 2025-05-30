@@ -8,12 +8,17 @@ import reservationsRoutes from './routes/reservations.js';
 
 const app = express();
 
+//configuracio cors
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
+
 // back se entiende con express
 app.use(express.json())
-app.use(cors())
 app.use(cookieParser())
-app.use('/events', eventsRoutes);
-app.use('/reservations', reservationsRoutes);
+app.use('/api/events', eventsRoutes);
+app.use('/api/reservations', reservationsRoutes);
 
 //usar las rutas
 app.use("/api", authRoutes)

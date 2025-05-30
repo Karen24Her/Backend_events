@@ -2,5 +2,5 @@ import app from './app.js'
 import {connectDB} from './bd.js'
 
 connectDB();
-app.listen(3000)
-console.log('server on port', 3000);
+app.listen(5000)
+console.log('server on port', 5000);
